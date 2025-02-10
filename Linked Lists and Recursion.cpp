@@ -2,7 +2,7 @@
 // SinglyLinkedList class by producing a forward and backward singly linked list
 // while demonstrating how to delete various nodes in the list. 
 
-#include "SinglyLinkedList.h"
+#include "SplitLinkedList.h"
 #include <iostream>
 
 int main()
@@ -58,4 +58,31 @@ int main()
     cout << "Delete the middle node" << endl;
     myList2.deleteValue(30);
     myList2.display();
+
+    cout << endl;
+
+    //Making a SplitLinkedList
+    SinglyLinkedList myEvenList;
+    SinglyLinkedList myOddList;
+    SplitLinkedList mySplitList;
+
+    for (int i = 1; i <= 20; i++)
+    {
+        mySplitList.insertAtEnd(i);
+    }
+    //Before splitting list
+    cout << "mySplitList (" << mySplitList.getCount() << ") : ";
+    mySplitList.display();
+
+    mySplitList.splitEvensOdds(myEvenList, myOddList);
+
+    //After splitting list
+    cout << "myEvenList (" << myEvenList.getCount() << ") : ";
+    myEvenList.display();
+    cout << "myOddList (" << myOddList.getCount() << ") : ";
+    myOddList.display();
+    cout << "mySplitList (" << mySplitList.getCount() << ") : ";
+    mySplitList.display();
+
+
 };
