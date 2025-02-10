@@ -78,42 +78,13 @@ public:
 	}
 	// Function to display the linked list
 	void display() {
+		cout << "(" << counter << "): ";
 		Node* temp = head;
 		while (temp) {
 			cout << temp->data << " -> ";
 			temp = temp->next;
 		}
 		cout << "nullptr\n";
-	}
-
-	int getCount()
-	{
-		return counter;
-	}
-
-	void incrementCount()
-	{
-		counter++;
-	}
-
-	Node* getHead()
-	{
-		return head;
-	}
-
-	Node* getTail()
-	{
-		return tail;
-	}
-
-	void setHead(Node* updateHead)
-	{
-		head = updateHead;
-	}
-
-	void setTail(Node* updateTail)
-	{
-		tail = updateTail;
 	}
 
 	// Destructor to free memory

@@ -6,32 +6,32 @@
 class SplitLinkedList : public SinglyLinkedList
 {
 public:
-	void splitEvensOdds(SinglyLinkedList& even, SinglyLinkedList& odd)
+	void splitEvensOdds(SplitLinkedList& even, SplitLinkedList& odd)
 	{
 		Node* current = head;
 		while (current != nullptr)
 		{
 			if (current->data % 2 == 0)
 			{
-				if (even.getCount() == 0)
-					even.setHead(current);
+				if (even.counter == 0)
+					even.head = current;
 				else
-					even.getTail()->next = current;
-				even.setTail(current);
-				even.incrementCount();
+					even.tail->next = current;
+				even.tail = current;
+				even.counter++;
 				current = current->next;
-				even.getTail()->next = nullptr;
+				even.tail->next = nullptr;
 			}
 			else
 			{
-				if (odd.getCount() == 0)
-					odd.setHead(current);
+				if (odd.counter == 0)
+					odd.head = current;
 				else
-					odd.getTail()->next = current;
-				odd.setTail(current);
-				odd.incrementCount();
+					odd.tail->next = current;
+				odd.tail = current;
+				odd.counter++;
 				current = current->next;
-				odd.getTail()->next = nullptr;
+				odd.tail->next = nullptr;
 			}
 		}
 		head = nullptr;

@@ -62,27 +62,31 @@ int main()
     cout << endl;
 
     //Making a SplitLinkedList
-    SinglyLinkedList myEvenList;
-    SinglyLinkedList myOddList;
+    SplitLinkedList myEvenList;
+    SplitLinkedList myOddList;
     SplitLinkedList mySplitList;
 
-    for (int i = 1; i <= 20; i++)
-    {
-        mySplitList.insertAtEnd(i);
-    }
     //Before splitting list
-    cout << "mySplitList (" << mySplitList.getCount() << ") : ";
+    cout << "list";
     mySplitList.display();
 
-    mySplitList.splitEvensOdds(myEvenList, myOddList);
-
+    int check = 0;
+    cout << "Please enter numbers to add to the list. When finished, enter -999: " << endl;
+    while (check != -999)
+    {
+        cin >> check;
+        if (check == -999)
+            mySplitList.splitEvensOdds(myEvenList, myOddList);
+        else
+            mySplitList.insertAtEnd(check);
+    }
     //After splitting list
-    cout << "myEvenList (" << myEvenList.getCount() << ") : ";
+    cout << "evenList";
     myEvenList.display();
-    cout << "myOddList (" << myOddList.getCount() << ") : ";
+
+    cout << "oddList";
     myOddList.display();
-    cout << "mySplitList (" << mySplitList.getCount() << ") : ";
+
+    cout << "list";
     mySplitList.display();
-
-
 };
