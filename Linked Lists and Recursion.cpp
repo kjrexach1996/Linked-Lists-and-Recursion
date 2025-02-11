@@ -61,32 +61,15 @@ int main()
 
     cout << endl;
 
-    //Making a SplitLinkedList
-    SplitLinkedList myEvenList;
-    SplitLinkedList myOddList;
-    SplitLinkedList mySplitList;
-
-    //Before splitting list
-    cout << "list";
-    mySplitList.display();
-
-    int check = 0;
-    cout << "Please enter numbers to add to the list. When finished, enter -999: " << endl;
-    while (check != -999)
+    //Testing displaying a list in reverse
+    SinglyLinkedList myReverseList;
+    for (int i = 1; i <= 20; i++)
     {
-        cin >> check;
-        if (check == -999)
-            mySplitList.splitEvensOdds(myEvenList, myOddList);
-        else
-            mySplitList.insertAtEnd(check);
+        myReverseList.insertAtEnd(i);
     }
-    //After splitting list
-    cout << "evenList";
-    myEvenList.display();
+    //Print list normally
+    myReverseList.display();
 
-    cout << "oddList";
-    myOddList.display();
-
-    cout << "list";
-    mySplitList.display();
+    //Print list in reverse
+    myReverseList.displayInReverse();
 };

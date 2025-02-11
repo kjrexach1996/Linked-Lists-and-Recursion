@@ -18,6 +18,18 @@ protected:
 	Node* head; // Pointer to the first node
 	Node* tail; // Pointer to the last node
 	int counter; // Keeps track of number of nodes in list
+
+	//Private recursive function to print a list in reverse order
+	void reversePrint(Node* h)
+	{
+		if (h == nullptr) //Base case
+		{
+			cout << "nullptr"; 
+			return;
+		}
+		reversePrint(h->next); //Recursive case
+		cout << " <- " << h->data; //Prints data in node
+	}
 public:
 	SinglyLinkedList() : head(nullptr), tail(nullptr), counter(0) {} // Constructor initializes
 	//the head to nullptr
@@ -78,13 +90,18 @@ public:
 	}
 	// Function to display the linked list
 	void display() {
-		cout << "(" << counter << "): ";
 		Node* temp = head;
 		while (temp) {
 			cout << temp->data << " -> ";
 			temp = temp->next;
 		}
 		cout << "nullptr\n";
+	}
+
+	// Function to display list in reverse
+	void displayInReverse()
+	{
+		reversePrint(head); //Calls private function
 	}
 
 	// Destructor to free memory
