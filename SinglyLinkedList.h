@@ -95,5 +95,6 @@ public:
 			head = head->next;
 			delete temp;
 		}
+		tail == nullptr;
 	}
 };
