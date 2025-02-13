@@ -101,7 +101,7 @@ public:
 	// Function to display list in reverse
 	void displayInReverse()
 	{
-		reversePrint(head); //Calls private function
+		reversePrint(head); //Calls private function, passes head pointer
 	}
 
 	// Destructor to free memory
