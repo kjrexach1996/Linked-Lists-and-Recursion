@@ -1,4 +1,4 @@
-// Linked List and Recursion.cpp : This file will test the functionality of the 
+// Linked List and Recursion.cpp: This file will test the functionality of the 
 // SinglyLinkedList class by producing a forward and backward singly linked list
 // while demonstrating how to delete various nodes in the list. 
 
