@@ -1,4 +1,4 @@
-//SinglyLinkedList.h - implementation and specifications for SinglyLinkedList class,
+//SplitLinkedList.h - implementation and specifications for SplitLinkedList class,
 //provided by instructor. 
 
 #pragma once
